@@ -5,6 +5,10 @@
  */
 function calculateRentalCost(days) {
   // write code here
+  if (typeof days !== 'number' || !Number.isInteger(days) || days < 0) {
+    return 'Please enter valid num';
+  }
+
   const singleDayCost = 40;
 
   if (days >= 3 && days < 7) {
